@@ -9854,7 +9854,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200605203705668" list="[[New Tiddler 2]] [[New Tiddler 1]] [[TODO List Macro]] Customizations" modified="20200607214907404" title="$:/StoryList">
+<div created="20200605203705668" list="[[New Tiddler 2]] [[TODO List Macro]] Customizations" modified="20200607214907404" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9915,7 +9915,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200605210226450" modified="20200607214323742" title="$:/temp/NewTagName">
+<div created="20200605210226450" modified="20200607215225347" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
 <div author="Paco Rivière" core-version="&gt;=5.0.0" created="20200605212508772" dependents="" description="Catalan (Spain)" icon="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22810%22%20height%3D%22540%22%3E%0A%3Crect%20width%3D%22810%22%20height%3D%22540%22%20fill%3D%22%23FCDD09%22%2F%3E%0A%3Cpath%20stroke%3D%22%23DA121A%22%20stroke-width%3D%2260%22%20d%3D%22M0%2C90H810m0%2C120H0m0%2C120H810m0%2C120H0%22%2F%3E%0A%3C%2Fsvg%3E" modified="20200605212508772" name="ca-ES" original-plugin-type="language" original-tags="" original-title="$:/languages/ca-ES" original-type="application/json" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/languages/ca-ES" type="text/vnd.tiddlywiki" version="5.1.22">
@@ -11007,7 +11007,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 
 &lt;/$list&gt;</pre>
 </div>
-<div created="20200605221332109" modified="20200607214328348" tags="task test" title="New Tiddler 1">
+<div created="20200605221332109" modified="20200607215226383" tags="task test" title="New Tiddler 1">
 <pre>tasdfa asasd fadsf asd</pre>
 </div>
 <div created="20200606211954052" modified="20200607215120582" tags="" title="New Tiddler 2">
@@ -11056,14 +11056,14 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 &lt;/$list&gt;
 </pre>
 </div>
-<div created="20200606204021870" modified="20200607215202447" tags="customization $:/tags/Macro" title="TODO List Macro">
+<div created="20200606204021870" modified="20200607221014803" tags="customization $:/tags/Macro" title="TODO List Macro">
 <pre>\define TODOs(name:&quot;&quot;)
 
 asdf: &lt;&lt;__name__&gt;&gt;
 
 ! TODO
 
-&lt;$list filter=&quot;[!has[draft.of]tag[task]tag[$name$]!tag[done]sort[created]]&quot;&gt;
+&lt;$list filter=&quot;[!has[draft.of]tag[task]tags[$name$]!tag[done]sort[created]]&quot;&gt;
 
 &lt;$checkbox tag=&quot;done&quot;&gt; &lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/$checkbox&gt;
 
