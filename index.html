@@ -9830,8 +9830,8 @@ Error message and password prompt
 <div created="20200605205235157" modified="20200606211914770" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20200605205052305" modified="20200606212003447" title="$:/state/sidebar">
-<pre>no</pre>
+<div created="20200605205052305" modified="20200606212033283" title="$:/state/sidebar">
+<pre>yes</pre>
 </div>
 <div created="20200605212258541" modified="20200605212326052" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Palette</pre>
@@ -9854,7 +9854,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200605203705668" list="[[New Tiddler 2]] [[TODO List Macro]] Customizations" modified="20200606204222366" title="$:/StoryList">
+<div created="20200605203705668" list="[[New Tiddler 2]] [[New Tiddler 1]] [[TODO List Macro]] Customizations" modified="20200606212014889" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -11007,8 +11007,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 
 &lt;/$list&gt;</pre>
 </div>
-<div created="20200605221332109" modified="20200605223458568" tags="task" title="New Tiddler 1">
-<pre></pre>
+<div created="20200605221332109" modified="20200606212021231" tags="task" title="New Tiddler 1">
+<pre>tasdfa asasd fadsf asd</pre>
 </div>
 <div created="20200606211954052" modified="20200606212007275" tags="" title="New Tiddler 2">
 <pre>&lt;&lt;TODOs&gt;&gt;</pre>
@@ -11056,14 +11056,14 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 &lt;/$list&gt;
 </pre>
 </div>
-<div created="20200606204021870" modified="20200606211931198" tags="customization $:/tags/Macro" title="TODO List Macro">
+<div created="20200606204021870" modified="20200607214223695" tags="customization $:/tags/Macro" title="TODO List Macro">
 <pre>\define TODOs(project: &quot;&quot;)
 
 ! TODO
 
-&lt;$list filter=&quot;[!has[draft.of]tag[task]!tag[done]sort[created]]&quot;&gt;
+&lt;$list filter=&quot;[!has[draft.of]tag[task]tag[&lt;&lt;__project__&gt;&gt;]!tag[done]sort[created]]&quot;&gt;
 
-&lt;$checkbox tag=&quot;done&quot;&gt; &lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;$view field=&quot;text&quot;/&gt;&lt;/$link&gt;&lt;/$checkbox&gt;
+&lt;$checkbox tag=&quot;done&quot;&gt; &lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/$checkbox&gt;
 
 &lt;/$list&gt;
 
