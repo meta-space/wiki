@@ -11010,8 +11010,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20200605221332109" modified="20200607215226383" tags="task test" title="New Tiddler 1">
 <pre>tasdfa asasd fadsf asd</pre>
 </div>
-<div created="20200606211954052" modified="20200608175026332" tags="" title="New Tiddler 2">
-<pre>&lt;&lt;TODOs &gt;&gt;</pre>
+<div created="20200606211954052" modified="20200608190251919" tags="" title="New Tiddler 2">
+<pre>&lt;&lt;TODOs estt&gt;&gt;</pre>
 </div>
 <div created="20200605205101055" modified="20200605211731995" tags="howto tiddlywiki" title="Setting up Github saver">
 <pre>*[[Github is a supported backend for TiddlyWiki|https://tiddlywiki.com/#Saving%20to%20a%20Git%20service]]
@@ -11056,7 +11056,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 &lt;/$list&gt;
 </pre>
 </div>
-<div created="20200606204021870" modified="20200608190238950" tags="customization $:/tags/Macro" title="TODO List Macro">
+<div created="20200606204021870" modified="20200608190403534" tags="customization $:/tags/Macro" title="TODO List Macro">
 <pre>\define TODOs(name:&quot;&quot;)
 
 asdf: &lt;&lt;__name__&gt;&gt;
@@ -11065,7 +11065,7 @@ asdf: &lt;&lt;__name__&gt;&gt;
 
 &lt;$set name=&quot;pt&quot; value=&quot;test&quot; &gt;
 
-&lt;$list filter=&quot;[!has[draft.of]tag[task]tag[&lt;pt&gt;]!tag[done]sort[created]]&quot;&gt;
+&lt;$list filter=&quot;[!has[draft.of]tag[task]&lt;pt&gt;!tag[done]sort[created]]&quot;&gt;
 
 &lt;$checkbox tag=&quot;done&quot;&gt; &lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/$checkbox&gt;
 
