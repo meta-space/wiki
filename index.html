@@ -11073,14 +11073,14 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20200608190407849" modified="20200608190407849" tags="done" title="test">
 <pre></pre>
 </div>
-<div created="20200606204021870" modified="20200608205138085" tags="customization $:/tags/Macro" title="TODO List Macro">
+<div created="20200606204021870" modified="20200608205323907" tags="customization $:/tags/Macro" title="TODO List Macro">
 <pre>\define TODOs(name:&quot;&quot;)
 
 asdf: &lt;&lt;__name__&gt;&gt;
 
 &lt;$set name=&quot;tname&quot; value=&quot;test&quot;&gt;
 
-  &lt;$list filter=&quot;[tag[task]tag[&lt;tname&gt;]sort[title]]&quot;&gt;
+  &lt;$list filter=&quot;[tag[task]tag[&lt;&lt;tname&gt;&gt;]sort[title]]&quot;&gt;
 
     &lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;
   &lt;/$list&gt;
