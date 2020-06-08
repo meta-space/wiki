@@ -9830,7 +9830,7 @@ Error message and password prompt
 <div created="20200605205235157" modified="20200606211914770" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20200605205052305" modified="20200607215200633" title="$:/state/sidebar">
+<div created="20200605205052305" modified="20200607222718984" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200605212258541" modified="20200605212326052" title="$:/state/tab--1963855381">
@@ -11056,14 +11056,16 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 &lt;/$list&gt;
 </pre>
 </div>
-<div created="20200606204021870" modified="20200607222647373" tags="customization $:/tags/Macro" title="TODO List Macro">
+<div created="20200606204021870" modified="20200608173606532" tags="customization $:/tags/Macro" title="TODO List Macro">
 <pre>\define TODOs(name:&quot;&quot;)
 
 asdf: &lt;&lt;__name__&gt;&gt;
 
 ! TODO
 
-&lt;$list filter=&quot;[!has[draft.of]tag[task]tag[[$name$]!s[&quot;&quot;]then[done]]!tag[done]sort[created]]&quot;&gt;
+&lt;$set name=&quot;projectTag&quot; filter=&quot;&quot; value=&quot;tag[task]&quot; emptyValue=&quot;tag[task]tag[$name$]&quot;&gt;
+
+&lt;$list filter=&quot;[!has[draft.of]$projectTag$!tag[done]sort[created]]&quot;&gt;
 
 &lt;$checkbox tag=&quot;done&quot;&gt; &lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/$checkbox&gt;
 
