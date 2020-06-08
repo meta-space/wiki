@@ -11073,24 +11073,24 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20200608190407849" modified="20200608190407849" tags="done" title="test">
 <pre></pre>
 </div>
-<div created="20200606204021870" modified="20200608210652629" tags="customization $:/tags/Macro" title="TODO List Macro">
+<div created="20200606204021870" modified="20200608210817211" tags="customization $:/tags/Macro" title="TODO List Macro">
 <pre>\define TODOs(name:&quot;&quot;)
 
 asdf: &lt;&lt;__name__&gt;&gt;
 
-&lt;$set name=&quot;myVariable&quot; filter=&quot;[!regexp:$name$[^$]]&quot; value=&quot;It's magic&quot; emptyValue=&quot;It's not magic&quot;&gt;
+&lt;$set name=&quot;myVariable&quot; filter=&quot;[regexp:$name$[^$]]&quot; value=&quot;$name$&quot; emptyValue=&quot;task&quot;&gt;
    &lt;$text text=&lt;&lt;myVariable&gt;&gt;/&gt;
-&lt;/$set&gt;
+
 
 ! TODO
 
-&lt;$set name=pt  value=&quot;foo&quot;&gt;
 
-&lt;$list filter=&quot;[!has[draft.of]tag[task]tag{pt}!tag[done]$pt$sort[created]]&quot;&gt;
 
-&lt;$checkbox tag=&quot;done&quot;&gt; &lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/$checkbox&gt;
+  &lt;$list filter=&quot;[!has[draft.of]tag[task]tag{pt}!tag[done]$pt$sort[created]]&quot;&gt;
 
-&lt;/$list&gt;
+     &lt;$checkbox tag=&quot;done&quot;&gt; &lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/$checkbox&gt;
+
+  &lt;/$list&gt;
 
 &lt;/$set&gt;
 
