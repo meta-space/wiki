@@ -11016,8 +11016,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20200605221332109" modified="20200608192356673" tags="task test" title="New Tiddler 1">
 <pre>tasdfa asasd fadsf asd</pre>
 </div>
-<div created="20200606211954052" modified="20200608190251919" tags="" title="New Tiddler 2">
-<pre>&lt;&lt;TODOs estt&gt;&gt;</pre>
+<div created="20200606211954052" modified="20200608203506754" tags="" title="New Tiddler 2">
+<pre>&lt;&lt;TODOs foo&gt;&gt;</pre>
 </div>
 <div created="20200608190806897" modified="20200608192349059" tags="" title="New Tiddler 3">
 <pre>&lt;$set name=&quot;var&quot; value=&quot;tag[test]&quot; emptyValue=&quot;&quot;&gt;
@@ -11073,12 +11073,12 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20200608190407849" modified="20200608190407849" tags="done" title="test">
 <pre></pre>
 </div>
-<div created="20200606204021870" modified="20200608203428537" tags="customization $:/tags/Macro" title="TODO List Macro">
+<div created="20200606204021870" modified="20200608203530404" tags="customization $:/tags/Macro" title="TODO List Macro">
 <pre>\define TODOs(name:&quot;&quot;)
 
 asdf: &lt;&lt;__name__&gt;&gt;
 
-&lt;$list filter=&quot;[tag{$name$}sort[title]]&quot;&gt;
+&lt;$list filter=&quot;[tag[task]tag[$name$]sort[title]]&quot;&gt;
 
  &lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt; &lt;$view field={{language!!language}}/&gt;
 &lt;br/&gt;
