@@ -11016,15 +11016,15 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20200605221332109" modified="20200609193437002" tags="task test" title="New Tiddler 1">
 <pre>tasdfa asasd fadsf asd</pre>
 </div>
-<div created="20200606211954052" modified="20200609193403555" tags="" title="New Tiddler 2">
-<pre>&lt;&lt;TODOs&gt;&gt;</pre>
+<div created="20200606211954052" modified="20200609193510858" tags="" title="New Tiddler 2">
+<pre>&lt;&lt;todo-list&gt;&gt;</pre>
 </div>
 <div created="20200608190806897" modified="20200608192349059" tags="" title="New Tiddler 3">
 <pre>&lt;$set name=&quot;var&quot; value=&quot;tag[test]&quot; emptyValue=&quot;&quot;&gt;
 &lt;&lt;list-links filter:&quot;[$(var)$]&quot;&gt;&gt;
 &lt;/$set&gt;</pre>
 </div>
-<div created="20200608192424588" modified="20200609193437867" tags="task foo" title="New Tiddler 4">
+<div created="20200608192424588" modified="20200609202805700" tags="task foo" title="New Tiddler 4">
 <pre></pre>
 </div>
 <div created="20200605205101055" modified="20200605211731995" tags="howto tiddlywiki" title="Setting up Github saver">
@@ -11073,15 +11073,15 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20200608190407849" modified="20200608190407849" tags="done" title="test">
 <pre></pre>
 </div>
-<div created="20200606204021870" modified="20200609193457437" tags="customization $:/tags/Macro" title="TODO List Macro">
-<pre>\define todo(name:&quot;&quot;)
+<div created="20200606204021870" modified="20200609212456959" tags="customization $:/tags/Macro" title="TODO List Macro">
+<pre>\define todo-list(name:&quot;&quot;)
 
 
 ! TODO
 
-&lt;$set name=&quot;myVariable&quot; filter=&quot;[regexp:$name$[^$]]&quot; value=&quot;$name$&quot; emptyValue=&quot;task&quot;&gt;
+&lt;$set name=&quot;nameTag&quot; filter=&quot;[regexp:$name$[^$]]&quot; value=&quot;$name$&quot; emptyValue=&quot;task&quot;&gt;
 
-  &lt;$list filter=&quot;&quot;&quot;[!has[draft.of]tag[task]tag&lt;myVariable&gt;!tag[done]sort[created]]&quot;&quot;&quot;&gt;
+  &lt;$list filter=&quot;[!has[draft.of]tag[task]tag&lt;nameTag&gt;!tag[done]sort[created]]&quot;&gt;
 
      &lt;$checkbox tag=&quot;done&quot;&gt; &lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/$checkbox&gt;
 
